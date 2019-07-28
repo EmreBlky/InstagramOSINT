@@ -97,7 +97,7 @@ class Scraper:
                                 "Taken At Timestamp": str(post['node']['taken_at_timestamp']),
                                 "Number of Likes": str(post['node']['edge_liked_by']['count']),
                                 "Location": str(post['node']['location']),
-                                "Accessability Caption": str(post['node']['accessibility_caption'])
+                                "Accessability Caption": str(post.get("node").get("accessibility_caption",""))
                                 }
 
                 # Downloads the thumbnails of the post
